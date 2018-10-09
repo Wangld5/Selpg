@@ -1,6 +1,8 @@
 # Selpg测试结果与分析
 ### 测试命令如下：  
-selpg2 --s=0 --e=1 test
+
+selpg2 --s=0 --e=1 test  
+
 ![preview](https://github.com/Wangld5/Selpg/blob/master/image/1.png)  
 selpg2 --s=0 --e=1 --l=5 test
 ![preview](https://github.com/Wangld5/Selpg/blob/master/image/2.png)  
