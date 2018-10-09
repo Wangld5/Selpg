@@ -124,7 +124,7 @@ func ProcessInput(args *selpgargs) {
 					os.Exit(1)
 				}
 				if count/args.pageLength >= args.startPage {
-					if count/args.pageLength > args.endPage {
+					if count/args.pageLength >= args.endPage {
 						break
 					} else {
 						printOrWrite(args, string(line), stdin)
