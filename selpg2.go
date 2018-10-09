@@ -101,7 +101,7 @@ func ProcessInput(args *selpgargs) {
 		}
 		reader := bufio.NewReader(output)
 		if args.pageType {
-			for pageNum := 0; pageNum <= args.endPage; pageNum++ {
+			for pageNum := args.startPage; pageNum <= args.endPage; pageNum++ {
 				line, err := reader.ReadString('\f')
 				if err != nil {
 					if err == io.EOF {
