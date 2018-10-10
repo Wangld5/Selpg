@@ -82,7 +82,7 @@ func ProcessInput(args *selpgargs) {
 	var cmd *exec.Cmd
 
 	if args.fileDest != "" {
-		cmd = exec.Command("cat", "-n")
+		cmd = exec.Command("lp", "-d"+args.fileDest)
 		stdin, err = cmd.StdinPipe()
 		if err != nil {
 			os.Stderr.Write([]byte("error happen in pipe\n"))
@@ -134,6 +134,7 @@ func ProcessInput(args *selpgargs) {
 			}
 
 		}
+		defer output.Close()
 	} else {
 		scanner := bufio.NewScanner(os.Stdin)
 		count := 0
@@ -154,7 +155,10 @@ func ProcessInput(args *selpgargs) {
 	if args.fileDest != "" {
 		stdin.Close()
 		cmd.Stdout = os.Stdout
-		cmd.Run()
+		err := cmd.Run()
+		if err != nil {
+			os.Stderr.Write([]byte("no printer\n"))
+		}
 	}
 }
 
