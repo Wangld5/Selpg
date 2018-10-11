@@ -19,4 +19,6 @@
 
 #### 5. selpg2 --s=3 --e=1 --l=5 --d=lp1 test  
 
-![preview](https://github.com/Wangld5/Selpg/blob/master/image/6.png)
+![preview](https://github.com/Wangld5/Selpg/blob/master/image/6.png)  
+
+[博客地址](https://blog.csdn.net/hellowangld/article/details/83000144)
